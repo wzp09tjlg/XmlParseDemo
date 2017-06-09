@@ -1,0 +1,43 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 25
+    buildToolsVersion "25.0.3"
+    defaultConfig {
+        applicationId "com.example.wuzp.xmlparsedemo"
+        minSdkVersion 15
+        targetSdkVersion 25
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    //打开DataBinding的开关
+    dataBinding {
+        enabled true
+    }
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    //constraint
+    compile constraint
+    //test
+    testCompile junit
+
+    // Google Support Lib
+    compile rootProject.ext.support_dependencies["v7"]
+    compile rootProject.ext.support_dependencies["v4"]
+    compile rootProject.ext.support_dependencies["design"]
+    compile rootProject.ext.support_dependencies["appcompat_v7"]
+    compile rootProject.ext.support_dependencies["multidex"]
+}

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+    <RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent">
+        <Button
+            android:id="@+id/btn_sax"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:text="sax Parse"
+            android:textSize="16dp"
+            android:layout_centerHorizontal="true"/>
+        <Button
+            android:id="@+id/btn_pull"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:text="pull Parse"
+            android:textSize="16dp"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/btn_sax"/>
+    </RelativeLayout>
+</layout>
